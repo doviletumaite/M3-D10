@@ -48,9 +48,9 @@
             <img src="./assets/kids_icon.png" height="20">
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">settings</a>
+            <a class="dropdown-item" href="#">privacy</a>
+            <a class="dropdown-item" href="#">exit</a>
           </div>
         </div>
       </form>
@@ -69,22 +69,24 @@
           Genres
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Drama</a>
+          <a class="dropdown-item" href="#">Fantasy</a>
+          <a class="dropdown-item" href="#">Comedy</a>
         </div>
-      </div></div>
-      <div class="col-3">
-      <button type="button" style="size: 2px;" class="btn btn-default btn-outline-light fa fa-fw fa-bars">
-        
-      </button>
-      <button type="button" style="size: 2px;" class="btn btn-default btn-outline-light fa fa-fw fa-bars"> 
-        
-      </button>
+      </div>
     </div>
+ 
   </div>
-  </div>
-  <div id="film-cont" class="container-fluid mt-4 pl-lg-5">
+  </div>    
+  <div class="container">
+  <div class="row">
+      <div id="film-cont" class="cols-md-4 cols-sm-6">
+<h2>New Entry</h2>
+      </div>
+     </div>
+    </div>
+
+  <div  class="container-fluid mt-4 pl-lg-5">
  
     <h3 class="section-title text-white">Trending Show</h3>
     <div class="row mx-n1 row-cols-12 row-cols-sm-6 row-cols-md-4 row-cols-lg-6 mb-4">
@@ -224,7 +226,7 @@ const BASE_URL = "https://striveschool-api.herokuapp.com/api/movies/";
           content.innerHTML = ``
           data.forEach((film) => {
               content.innerHTML += `
-              <div class="card" style="width: 18rem;">
+              <div class="card">
   <img src="${film.imageUrl}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${film.name}</h5>

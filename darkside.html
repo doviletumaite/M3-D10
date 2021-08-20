@@ -104,9 +104,9 @@
                 Genres
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Drama</a>
+                <a class="dropdown-item" href="#">Fantasy</a>
+                <a class="dropdown-item" href="#">Comedy</a>
               </div>
             </div>
           </div>
@@ -133,8 +133,8 @@
               </div>
             
               <div class="form-group">
-                <button type="submit" class="btn btn-dark mr-2">Save</button>
-                <button type="reset" class="btn btn-dark mr-2">Edit</button>
+                <button type="submit" onclick="createFilm(event)" class="btn btn-dark mr-2">Save</button>
+                <button type="reset" class="btn btn-dark mr-2">Delete</button>
               </div>
         
           </form>
@@ -260,6 +260,8 @@
       </div>
     </footer>
 <script>
+const params = new URLSearchParams(location.search)
+const id = params.get('id')
 
 const BASE_URL = "https://striveschool-api.herokuapp.com/api/movies/";
     const headers = new Headers({
@@ -279,7 +281,7 @@ const BASE_URL = "https://striveschool-api.herokuapp.com/api/movies/";
     };
 
     const createFilm = function (event) {
-        event.preventDefault();
+        event.preventDefault(event);
         const imageUrl = document.querySelector("#url-img").value
         const category = document.querySelector("#category").value
         const description = document.querySelector("#description").value
